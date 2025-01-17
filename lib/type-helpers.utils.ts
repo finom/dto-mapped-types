@@ -1,10 +1,8 @@
-export interface Type<T = any> extends Function {
-  new (...args: any[]): T;
-}
+import { Type } from './nestjs-common-type';
 
 const logger = {
   error: (...args: any[]) => console.error(...args),
-};
+}
 
 export function applyIsOptionalDecorator(
   targetClass: Function,
