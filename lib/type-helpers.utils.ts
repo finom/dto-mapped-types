@@ -1,6 +1,10 @@
-import { Logger, Type } from '@nestjs/common';
+export interface Type<T = any> extends Function {
+  new (...args: any[]): T;
+}
 
-const logger = new Logger('MappedTypes');
+const logger = {
+  error: (...args: any[]) => console.error(...args),
+};
 
 export function applyIsOptionalDecorator(
   targetClass: Function,

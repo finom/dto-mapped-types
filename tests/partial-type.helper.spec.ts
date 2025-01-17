@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { Expose, instanceToInstance, Transform, Type } from 'class-transformer';
 import { IsString, validate } from 'class-validator';
 import { PartialType } from '../lib';

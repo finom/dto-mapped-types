@@ -1,3 +1,10 @@
+# vovk-mapped-types
+
+This is a fork of `@nestjs/mapped-types` package that doesn't use [@nestjs/common](https://www.npmjs.com/package/@nestjs/common) package as a dependency and can be used in Edge Runtime.
+
+--------------
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>

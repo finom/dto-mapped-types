@@ -1,4 +1,10 @@
-import { Expose, instanceToInstance, plainToInstance, Transform } from 'class-transformer';
+import 'reflect-metadata';
+import {
+  Expose,
+  instanceToInstance,
+  plainToInstance,
+  Transform,
+} from 'class-transformer';
 import { MinLength, validate } from 'class-validator';
 import { PickType } from '../lib';
 import { getValidationMetadataByTarget } from './type-helpers.test-utils';
@@ -78,7 +84,7 @@ describe('PickType', () => {
       class Children extends PickType(Parent, ['value']) {
         @Transform(function childrenTransform(params) {
           transformExecuteSequenceList.push(Children.name);
-          return params.value
+          return params.value;
         })
         value!: number;
       }

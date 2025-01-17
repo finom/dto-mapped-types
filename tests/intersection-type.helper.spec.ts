@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { instanceToInstance, Transform } from 'class-transformer';
 import { IsString, MinLength, validate } from 'class-validator';
 import { IntersectionType } from '../lib';
@@ -60,7 +61,8 @@ describe('IntersectionType', () => {
           minLength: 'password must be longer than or equal to 10 characters',
         });
         expect(validationErrors[1].constraints).toEqual({
-          minLength: 'repeatedProperty must be longer than or equal to 15 characters',
+          minLength:
+            'repeatedProperty must be longer than or equal to 15 characters',
         });
         expect(validationErrors[2].constraints).toEqual({
           minLength: 'lastName must be longer than or equal to 5 characters',
@@ -97,7 +99,9 @@ describe('IntersectionType', () => {
 
       expect(transformedDto.lastName).toEqual(lastName + '_transformed');
       expect(transformedDto.password).toEqual(password + '_transformed');
-      expect(transformedDto.repeatedProperty).toEqual(repeatedProperty + '_transformed');
+      expect(transformedDto.repeatedProperty).toEqual(
+        repeatedProperty + '_transformed',
+      );
     });
   });
 

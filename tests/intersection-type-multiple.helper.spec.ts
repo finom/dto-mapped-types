@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { instanceToInstance, Transform } from 'class-transformer';
 import { IsString, MinLength, validate } from 'class-validator';
 import { IntersectionType } from '../lib';
