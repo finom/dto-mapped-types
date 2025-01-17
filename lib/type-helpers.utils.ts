@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import { Type } from './nestjs-common-type';
 
 const logger = {
@@ -59,12 +58,14 @@ export function inheritValidationMetadata(
           !isPropertyInherited || isPropertyInherited(propertyName),
       )
       .map((value) => {
+        // @ts-ignore
         const originalType = Reflect.getMetadata(
           'design:type',
           parentClass.prototype,
           value.propertyName,
         );
         if (originalType) {
+          // @ts-ignore
           Reflect.defineMetadata(
             'design:type',
             originalType,
