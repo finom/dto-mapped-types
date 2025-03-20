@@ -1,5 +1,5 @@
 {
-  "name": "vovk-mapped-types",
+  "name": "dto-mapped-types",
   "version": "0.0.6",
   "description": "Nest - modern, fast, powerful node.js web framework (@mapped-types)",
   "author": "Kamil Mysliwiec",
@@ -62,6 +62,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/finom/vovk-mapped-types"
+    "url": "https://github.com/finom/dto-mapped-types"
   }
 }

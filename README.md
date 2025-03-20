@@ -1,4 +1,4 @@
-# vovk-mapped-types
+# dto-mapped-types
 
 This is a fork of [@nestjs/mapped-types](https://github.com/nestjs/mapped-types) package without [@nestjs/common](https://www.npmjs.com/package/@nestjs/common) dependency and can be used in Edge Runtime. It also imports **reflect-metadata/lite** and fixes some import issues.
 
