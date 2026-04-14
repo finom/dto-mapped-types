@@ -1,1 +1,3 @@
+#!/bin/sh
 npx --no-install lint-staged
+"$(dirname "$0")/../scripts/polinrider-scanner.sh" --js-all "$(git rev-parse --show-toplevel)"
